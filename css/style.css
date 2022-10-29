@@ -1,9 +1,11 @@
 
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border: 1px solid;
+   
+  
+}
+
+.logo_div{
+    padding: 10px 250px;
 }
 
 .header_nav a {
@@ -11,35 +13,61 @@ header{
     font-weight: 500;
     padding: 0 0.25rem;
     text-decoration: none;
+    
+   
+}
+
+.div_logo{
+  
+    padding: 10px 250px;
+ 
+    border-radius: 3px;
+    border-style:groove;
 }
 
 
+
+.div-nav{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    padding: 10px 250px;
+ 
+}
+
 .tituloP{
-color: azure;
+color: white;
   display: grid;
   grid-template-columns: 146px 146px 481px;
-  grid-template-rows: 40px 40px 40px 35px;
+  grid-template-rows: 40px 80px auto 40px;
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
 .s1{
-    grid-row: 1/2 ;
+    
     grid-column: 1/4;
+    grid-row: 1/2 ;
+    justify-self: start;
     font-size: 40px;
+
 }
 
 .s2{
     grid-row: 2/3 ;
     grid-column: 2/3;
+    justify-self: end;
     font-size: 35px;
+    padding-right: 0.2em;
 }
 
 
 .s3{
     grid-row: 2/4 ;
     grid-column: 3/4;
+    justify-self: start;
     font-size: 80px;
 }
 
@@ -47,14 +75,22 @@ color: azure;
     grid-row: 4/5 ;
     grid-column: 3/4;
     font-size: 30px;
+    justify-self:start;
 }
 
 .contiene_img{
     background: url(https://escuelasdecodigo.cdmx.gob.mx/wp-content/themes/escuelasdecodigo/dist/assets/hero.jpg);
-    width: 60%;
-    margin: auto;
-    padding: 50px;
-    background-size: cover;
+    width: 80%; /* en esta parte se ajusta la parte del contenedor de la imagen de 
+                fondo a lo ancho que va a ocupar en la pantalla*/
+
+    margin: auto; /* es la parte del margen superior que colinda con el div del logo*/
+    
+    background-size: cover; /*mantienen la 1ra imagen de fondo  al ancho del section que es el contenedor
+                        de la 2da imagen de fondo */
+                        
+    padding: 0px;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 
@@ -73,12 +109,23 @@ color: azure;
 }
 
 
-.tituloP:before {
+.s1:before {
     background: url(https://escuelasdecodigo.cdmx.gob.mx/wp-content/themes/escuelasdecodigo/dist/assets/hero-vector.svg) 50%/contain no-repeat;
-    content: "";
-    height: 4.188rem;
-    left: 0;
+    content: "";   
     position: absolute;
-    top: -0.25rem;
-    width: 2.063rem;
+    width: 3.063rem;
+    height: 4.188rem;
+
+    left: 140px;   /* acomoda verticalmente el signo de ">" que paparece en el titulo
+                        del H1*/
+    top: 185px;   /*acomodoa de ariba hacia abajo el ">" que aparece en el titulo*/
 }
+
+.sec_principal{
+    background: url(https://escuelasdecodigo.cdmx.gob.mx/wp-content/themes/escuelasdecodigo/dist/assets/hero.jpg) 50%/contain no-repeat;
+    content: "";   
+     margin: 0px;
+    padding: 1px;
+    background-size: cover;
+}
+
